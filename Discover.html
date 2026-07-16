@@ -101,7 +101,9 @@
   .filmwrap{background:var(--ink)}
   .filmwrap .eyebrow{color:var(--clay-soft)}
   .film{position:relative;width:100%;aspect-ratio:16/9;background:#000;overflow:hidden;border-radius:2px}
-  .film iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+  .film video{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover}
+  .film-note{margin-top:1.2rem;font-size:.86rem;color:rgba(246,243,238,.55);letter-spacing:.02em}
+  .film-note a{color:rgba(246,243,238,.8);text-underline-offset:3px}
   /* detail band: image left, short line right */
   .detail{display:grid;grid-template-columns:1.3fr 1fr;align-items:stretch;background:var(--paper-2)}
   .detail .d-img{min-height:clamp(360px,52vh,620px)}
@@ -213,12 +215,12 @@
   <div class="wrap">
     <p class="eyebrow reveal">Experience Living in Mt Eliza</p>
     <div class="film reveal d1">
-      <iframe
-        src="https://www.youtube-nocookie.com/embed/VIDEO_ID?rel=0&amp;playsinline=1"
-        title="25 Glen Shian Lane, Mt Eliza"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen></iframe>
+      <video controls preload="metadata" playsinline poster="images/Pavilion_25GS_Pool.jpg">
+        <source src="https://www.dropbox.com/scl/fi/tre3idqknnyzwpxu6361x/MarshallWhite_Lattitude_Master_v2.mp4?rlkey=ahu9qsgbemx14gaw4hlwlqrio&amp;st=lvf8yll2&amp;e=1&amp;raw=1" type="video/mp4">
+        Your browser cannot play this video.
+      </video>
+    </div>
+    <p class="film-note reveal d1">Draft for review. <a href="https://www.dropbox.com/scl/fi/tre3idqknnyzwpxu6361x/MarshallWhite_Lattitude_Master_v2.mp4?rlkey=ahu9qsgbemx14gaw4hlwlqrio&amp;st=lvf8yll2&amp;e=1&amp;dl=0" target="_blank" rel="noopener">Open in Dropbox</a> if it does not play here.</p>
     </div>
   </div>
 </section>

@@ -97,7 +97,11 @@
   .lead{font-size:1.22rem;line-height:1.6;color:var(--ink);font-weight:300}
   h2.head{font-size:clamp(1.9rem,4vw,3rem);font-weight:300;max-width:18ch}
   section p + p{margin-top:1.1rem}
-
+  /* film */
+  .filmwrap{background:var(--ink)}
+  .filmwrap .eyebrow{color:var(--clay-soft)}
+  .film{position:relative;width:100%;aspect-ratio:16/9;background:#000;overflow:hidden;border-radius:2px}
+  .film iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
   /* detail band: image left, short line right */
   .detail{display:grid;grid-template-columns:1.3fr 1fr;align-items:stretch;background:var(--paper-2)}
   .detail .d-img{min-height:clamp(360px,52vh,620px)}
@@ -204,7 +208,20 @@
 </section>
 
 <!-- ============ SCROLL TWO: DEEPEN + CONVERT ============ -->
-
+<!-- FILM -->
+<section class="filmwrap pad" id="film">
+  <div class="wrap">
+    <p class="eyebrow reveal">The film</p>
+    <div class="film reveal d1">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/VIDEO_ID?rel=0&amp;playsinline=1"
+        title="25 Glen Shian Lane, Mt Eliza"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
 <!-- TWO HOMES -->
 <section class="homes pad" id="residences">
   <div class="wrap">

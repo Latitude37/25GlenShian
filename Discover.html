@@ -348,7 +348,11 @@
   window.addEventListener('load', function(){
     if (window.Cognito && Cognito.prefill) {
       try {
-        var src = new URLSearchParams(window.location.search).get('source') || 'direct';
+        var params = new URLSearchParams(window.location.search);
+        var src = params.get('source');
+        // Fallback: if no explicit source but Meta's click ID is present, it's Meta.
+        if (!src && (params.get('fbclid') || params.get('igshid'))) { src = 'meta'; }
+        if (!src) { src = 'direct'; }
         Cognito.prefill({ "Source": src });
       } catch(e){}
     }
